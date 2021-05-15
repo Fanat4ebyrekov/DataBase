@@ -77,7 +77,7 @@ namespace NikitaNikita2313.Windows
             person.IdGender = tbGender.SelectedIndex + 1;
             context.Person.Add(person);
             context.SaveChanges();
-            MessageBox.Show("Пользователь добавлен");
+            MessageBox.Show("Пользователь добавлен5");
             this.Hide();
             AllUsers allUsersWindow = new AllUsers();
             allUsersWindow.ShowDialog();
