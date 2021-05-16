@@ -100,20 +100,7 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Button
-            x:Name="Back"
-            Content="Назад"
-            FontSize="30"
-            Grid.Column="0"
-            Width="150"
-            Grid.Row="2"
-            Margin="15"
-            HorizontalAlignment="Center"
-            BorderBrush="{x:Null}" 
-            Background="{x:Null}" 
-            Foreground="White"
-            Click="Back_Click"
-            />
+        
 
         <Button
             x:Name="Add"

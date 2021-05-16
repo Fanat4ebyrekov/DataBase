@@ -77,11 +77,11 @@ namespace NikitaNikita2313.Windows
             person.IdGender = tbGender.SelectedIndex + 1;
             context.Person.Add(person);
             context.SaveChanges();
-<<<<<<< HEAD
+
             MessageBox.Show("Пользователь добавлен5");
-=======
+
             MessageBox.Show("Пользователь добавлен");
->>>>>>> 94d56a20f5d3d2d5a73bd5cd4f2d00df29deea19
+
             this.Hide();
             AllUsers allUsersWindow = new AllUsers();
             allUsersWindow.ShowDialog();
@@ -90,7 +90,7 @@ namespace NikitaNikita2313.Windows
 
         private void EditUser_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
+
             var user = context.Person.Where(i => i.IdPerson == PersonData.IdPerson).FirstOrDefault();
             user.Name = tbLog.Text.Trim();
             user.Password = tbPass.Text.Trim();
@@ -132,11 +132,8 @@ namespace NikitaNikita2313.Windows
         }
 
 
-=======
-            this.Close();
-        }
 
-       
->>>>>>> 94d56a20f5d3d2d5a73bd5cd4f2d00df29deea19
+  
+        
     }
 }

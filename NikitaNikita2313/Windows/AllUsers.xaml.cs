@@ -55,11 +55,7 @@ namespace NikitaNikita2313.Windows
 
         
 
-        private void Back_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
+        
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
