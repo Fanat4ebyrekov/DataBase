@@ -38,7 +38,7 @@
                 VerticalAlignment="Top"
                 x:Name="btn_Click1"
                 Click="btn_Click1_Click"
-                               
+                
             />
         <TextBlock
             Text="Поиск по логину:"
