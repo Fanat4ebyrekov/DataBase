@@ -21,7 +21,6 @@ namespace NikitaNikita2313.Windows
     /// </summary>
     public partial class AllUsers : Window
     {
-<<<<<<< HEAD
 
         List<Person> people = new List<Person>();
         List<Role> roleList = new List<Role>();
@@ -53,18 +52,14 @@ namespace NikitaNikita2313.Windows
 
             All.ItemsSource = people;
         }
-                    
-=======
-        public AllUsers()
-        {
-            InitializeComponent();
-        }
+
+        
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
->>>>>>> 94d56a20f5d3d2d5a73bd5cd4f2d00df29deea19
+
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
@@ -99,7 +94,7 @@ namespace NikitaNikita2313.Windows
         {
             this.Close();
         }
-<<<<<<< HEAD
+
 
         private void Change_Click(object sender, RoutedEventArgs e)
         {
@@ -134,7 +129,6 @@ namespace NikitaNikita2313.Windows
         {
            Filter();
         }
-=======
->>>>>>> 94d56a20f5d3d2d5a73bd5cd4f2d00df29deea19
+
     }
 }

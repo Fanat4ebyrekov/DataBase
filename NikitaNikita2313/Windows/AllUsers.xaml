@@ -38,8 +38,7 @@
                 VerticalAlignment="Top"
                 x:Name="btn_Click1"
                 Click="btn_Click1_Click"
-<<<<<<< HEAD
-                
+  
             />
         <TextBlock
             Text="Поиск по логину:"
@@ -80,20 +79,8 @@
                  VerticalAlignment="Bottom"
                  Margin="5"
                  x:Name="cmbSortRole"
-                 SelectionChanged="cmbSortRole_SelectionChanged"
-=======
-                               
-            />
-        <TextBlock
-            Text="Пользователи"
-            FontSize="30"
-            Grid.Row="0"
-            Grid.ColumnSpan="3"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center" 
-            Foreground="White"
->>>>>>> 94d56a20f5d3d2d5a73bd5cd4f2d00df29deea19
-            />
+                 SelectionChanged="cmbSortRole_SelectionChanged"/>
+        
         <DataGrid
             x:Name="All"
             Grid.ColumnSpan="3"
@@ -112,9 +99,7 @@
                 <DataGridTextColumn Header="Роль" Width="*" Binding="{Binding Role.RoleName}"/>
             </DataGrid.Columns>
         </DataGrid>
-<<<<<<< HEAD
-        
-=======
+
         <Button
             x:Name="Back"
             Content="Назад"
@@ -129,7 +114,7 @@
             Foreground="White"
             Click="Back_Click"
             />
->>>>>>> 94d56a20f5d3d2d5a73bd5cd4f2d00df29deea19
+
         <Button
             x:Name="Add"
             Content="Добавить"
@@ -154,7 +139,7 @@
             Foreground="White"  RenderTransformOrigin="0.501,0.504"
             Click="Delete_Click"
             />
-<<<<<<< HEAD
+
         <Button
             x:Name="Change"
             Content="Изменить"
@@ -168,7 +153,6 @@
             Click="Change_Click"
             
             />
-=======
->>>>>>> 94d56a20f5d3d2d5a73bd5cd4f2d00df29deea19
+
     </Grid>
 </Window>
