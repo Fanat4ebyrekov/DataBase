@@ -21,16 +21,38 @@ namespace NikitaNikita2313.Windows
     /// </summary>
     public partial class AllUsers : Window
     {
+
+        List<Person> people = new List<Person>();
+        List<Role> roleList = new List<Role>();
+
         public AllUsers()
         {
             InitializeComponent();
             All.ItemsSource = context.Person.ToList();
+            roleList = ClassEntities.context.Role.ToList();
+            roleList.Insert(0, new Role {RoleName = "Все роли"});
+            cmbSortRole.ItemsSource = roleList;
+            cmbSortRole.DisplayMemberPath = "RoleName";
+            cmbSortRole.SelectedIndex = 0;
+
+            Filter();
         }
 
-        private void Back_Click(object sender, RoutedEventArgs e)
+        private void Filter()
         {
-            this.Close();
+            people = ClassEntities.context.Person.ToList();
+
+            if (cmbSortRole.SelectedIndex != 0)
+            {
+                people = people.Where(i => i.IdRole == cmbSortRole.SelectedIndex).ToList();
+            }
+
+            people = people.Where(i => i.FIO.Contains(txtSearch.Text)).ToList();
+
+
+            All.ItemsSource = people;
         }
+                    
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
@@ -88,6 +110,16 @@ namespace NikitaNikita2313.Windows
             {
                 MessageBox.Show($"Вы не выбрали пользователя", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+           Filter();
+        }
+
+        private void cmbSortRole_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+           Filter();
         }
     }
 }

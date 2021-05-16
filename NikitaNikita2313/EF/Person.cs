@@ -19,6 +19,8 @@ namespace NikitaNikita2313.EF
         public string Password { get; set; }
         public int IdRole { get; set; }
         public int IdGender { get; set; }
+
+        public string FIO { get => $"{Name} {Password}"; }
     
         public virtual Gender Gender { get; set; }
         public virtual Role Role { get; set; }

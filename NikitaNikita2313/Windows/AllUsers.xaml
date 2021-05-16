@@ -41,13 +41,45 @@
                                
             />
         <TextBlock
-            Text="Пользователи"
-            FontSize="30"
+            Text="Поиск по логину:"
+            FontSize="25"
             Grid.Row="0"
-            Grid.ColumnSpan="3"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center" 
+            Grid.Column ="0"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left" 
             Foreground="White"
+            Margin="5 2 2 2"
+            />
+        <TextBox Grid.Row="0"
+                 Grid.Column="0"
+                 Width="222"
+                 Height="50"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Bottom"
+                 x:Name="txtSearch"
+                 TextChanged="txtSearch_TextChanged"
+                 Margin="5"
+                 
+            />
+        <TextBlock
+            Text="Выбор по ролям:"
+            FontSize="25"
+            Grid.Row="0"
+            Grid.Column ="1"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left" 
+            Foreground="White"
+            Margin="5 2 2 2"
+            />
+        <ComboBox Grid.Row="0"
+                 Grid.Column="1"
+                 Width="222"
+                 Height="50"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Bottom"
+                 Margin="5"
+                 x:Name="cmbSortRole"
+                 SelectionChanged="cmbSortRole_SelectionChanged"
             />
         <DataGrid
             x:Name="All"
@@ -67,20 +99,7 @@
                 <DataGridTextColumn Header="Роль" Width="*" Binding="{Binding Role.RoleName}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button
-            x:Name="Back"
-            Content="Назад"
-            FontSize="30"
-            Grid.Column="0"
-            Width="150"
-            Grid.Row="0"
-            Margin="15"
-            HorizontalAlignment="Center"
-            BorderBrush="{x:Null}" 
-            Background="{x:Null}" 
-            Foreground="White"
-            Click="Back_Click"
-            />
+        
         <Button
             x:Name="Add"
             Content="Добавить"

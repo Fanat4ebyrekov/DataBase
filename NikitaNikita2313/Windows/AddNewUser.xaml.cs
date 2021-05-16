@@ -113,8 +113,8 @@ namespace NikitaNikita2313.Windows
 
                 MessageBox.Show("Данные изменены");
                 this.Hide();
-                AddNewUser allUsersWindow = new AddNewUser();
-                allUsersWindow.ShowDialog();
+                AllUsers allUsers = new AllUsers();
+                allUsers.ShowDialog();
                 this.Close();
             }
 
