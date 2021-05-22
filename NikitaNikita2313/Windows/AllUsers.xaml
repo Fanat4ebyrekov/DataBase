@@ -85,12 +85,14 @@
             x:Name="All"
             Grid.ColumnSpan="3"
             Grid.Row="1"
-            AutoGenerateColumns="False">
+            AutoGenerateColumns="False"
+            Height="200"
+            VerticalAlignment="Top">
             <DataGrid.Background>
                 <SolidColorBrush Color="#FFF0F0F0" Opacity="0"/>
             </DataGrid.Background>
 
-
+            
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Width="*" Binding="{Binding IdPerson}"/>
                 <DataGridTextColumn Header="Логин" Width="*" Binding="{Binding Name}"/>
@@ -100,7 +102,60 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        
+        <Button Grid.Row="1"
+                Grid.Column="2"
+                Width="80"
+                Height="70"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"               
+                Content="Previous"
+                FontSize="20"
+                Foreground="White"
+                BorderBrush="{x:Null}" 
+                Background="{x:Null}" 
+                x:Name="Previous"
+                Click="Previous_Click"
+            />
+        <Button Grid.Row="1"
+                Grid.Column="2"
+                Width="80"
+                Height="70"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                Content="Next"
+                FontSize="20"
+                Foreground="White"
+                BorderBrush="{x:Null}" 
+                Background="{x:Null}" 
+                x:Name="Next"
+               Click="Next_Click"
+            />
+
+          
+        <ComboBox
+            Grid.Row="0"
+                 Grid.Column="2"
+                 Width="222"
+                 Height="50"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Bottom"
+                 Margin="5"
+                 x:Name="cmbVolume"
+            SelectionChanged="cmbVolume_SelectionChanged">
+            
+        </ComboBox>   
+            
+
+        <TextBlock
+            Text="Кол-во пользователей:"
+            FontSize="21"
+            Grid.Row="0"
+            Grid.Column ="2"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left" 
+            Foreground="White"
+            Margin="5 2 2 2"
+            />
 
         <Button
             x:Name="Add"

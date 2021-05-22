@@ -78,7 +78,7 @@ namespace NikitaNikita2313.Windows
             context.Person.Add(person);
             context.SaveChanges();
 
-            MessageBox.Show("Пользователь добавлен5");
+          
 
             MessageBox.Show("Пользователь добавлен");
 
